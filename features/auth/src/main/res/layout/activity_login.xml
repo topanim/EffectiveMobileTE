@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Dark"
+    tools:context=".presentation.LoginActivity">
+
+    <TextView
+        android:id="@+id/tvRating"
+        style="@style/Headline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:text="Войти"
+        android:textColor="@color/White"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/TitleMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Email"
+        android:textColor="@color/White"
+        app:layout_constraintEnd_toEndOf="@+id/tvRating"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvRating"
+        app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TitleMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Пароль"
+        android:textColor="@color/White"
+        app:layout_constraintEnd_toEndOf="@+id/etEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etEmail"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_shape"
+        android:backgroundTint="@color/LightGray"
+        android:hint="example@gmail.com"
+        android:inputType="textVisiblePassword"
+        android:privateImeOptions="nm"
+        android:textColorHint="@color/Hint"
+        app:layout_constraintEnd_toEndOf="@+id/tvDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        tools:ignore="TextFields" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Вход"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        app:background="@drawable/rounded_cart_shape"
+        app:backgroundTint="@color/Green"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/etPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_shape"
+        android:backgroundTint="@color/LightGray"
+        android:hint="Введите пароль"
+        android:inputType="textPassword"
+        android:textColorHint="@color/Hint"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <ImageButton
+            android:id="@+id/btnVk"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:contentDescription="ВКонтакте"
+            android:src="@drawable/ic_vk"
+            android:textColor="@color/White"
+            android:background="@drawable/rounded_cart_shape"
+            android:backgroundTint="@color/VK" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:contentDescription="Одноклассники"
+            android:src="@drawable/ic_ok"
+            android:textColor="@color/White"
+            android:background="@drawable/ok_button_shape"
+            android:backgroundTint="@null" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRegister"
+        style="@style/ButtonSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Нет аккаунта? Регистрация"
+        android:textAppearance="@style/ButtonSmall"
+        android:textColor="@color/White"
+        android:textColorLink="@color/Green"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+        app:layout_constraintStart_toStartOf="@+id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        style="@style/ButtonSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Забыл пароль"
+        android:textAppearance="@style/ButtonSmall"
+        android:textColor="@color/Green"
+        android:textStyle="bold"
+        android:textColorLink="@color/Green"
+        app:layout_constraintEnd_toEndOf="@+id/tvRegister"
+        app:layout_constraintStart_toStartOf="@+id/tvRegister"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

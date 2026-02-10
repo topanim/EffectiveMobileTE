@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Hint">#929296</color>
+    <color name="Dark">#151515</color>
+    <color name="DarkGray">#24252A</color>
+    <color name="White">#F2F2F3</color>
+    <color name="LightGray">#32333A</color>
+    <color name="Green">#12B956</color>
+    <color name="VK">#2683ED</color>
+    <color name="OK1">#F98509</color>
+    <color name="OK2">#F95D00</color>
+</resources>
